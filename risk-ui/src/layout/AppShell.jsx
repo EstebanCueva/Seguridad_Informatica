@@ -185,7 +185,6 @@ export default function AppShell({ children }) {
           </Toolbar>
         </AppBar>
 
-        {/* Page content wrapper */}
         <Box sx={{ p: { xs: 2, md: 3 } }}>
           <Box sx={{ maxWidth: 1400, mx: "auto", width: "100%" }}>
             {children}

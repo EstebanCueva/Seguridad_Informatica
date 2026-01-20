@@ -46,23 +46,20 @@ export default function Dashboard() {
         Dashboard
       </Typography>
       <Typography sx={{ color: "text.secondary", mb: 2 }}>
-        KPIs + Tendencia real + distribución
+        Dashboard de riesgos y controles
       </Typography>
 
-      {/* GRID: KPIs FULL WIDTH (3) */}
       <Box sx={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 2 }}>
         <KpiFill title="Total riesgos" value={kpi.total} />
         <KpiFill title="High" value={kpi.high} chip="Priority" />
         <KpiFill title="Critical" value={kpi.critical} chip="Urgent" />
       </Box>
 
-      {/* Extra KPIs de monitoreo (controles ISO) */}
       <Box sx={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 2, mt: 2 }}>
         <KpiFill title="Controles total" value={kpi.controlsTotal} />
         <KpiFill title="Controles implementados" value={kpi.controlsImplemented} />
       </Box>
 
-      {/* Trend FULL WIDTH */}
       <Box sx={{ mt: 2 }}>
         <CardPro title="Risk Trend (últimos 14 días)" h={420}>
           <Box sx={{ height: 330 }}>
@@ -79,7 +76,6 @@ export default function Dashboard() {
                 <XAxis dataKey="date" />
                 <YAxis allowDecimals={false} />
                 <Tooltip />
-                {/* Puedes cambiar a scoreSum si quieres tendencia por impacto total */}
                 <Area type="monotone" dataKey="count" stroke="#FF3D7F" fill="url(#grad)" strokeWidth={2} />
               </AreaChart>
             </ResponsiveContainer>
@@ -87,7 +83,6 @@ export default function Dashboard() {
         </CardPro>
       </Box>
 
-      {/* 2 charts casi full width */}
       <Box sx={{ display: "grid", gridTemplateColumns: "2fr 1fr", gap: 2, mt: 2 }}>
         <CardPro title="Riesgos por nivel" h={380}>
           <Box sx={{ height: 300 }}>

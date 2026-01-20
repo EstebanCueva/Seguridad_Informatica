@@ -56,7 +56,6 @@ export default function Risks() {
 
     const payload = { ...form };
 
-    // Normaliza vacíos
     payload.existingControls = payload.existingControls ?? "";
     payload.observations = payload.observations ?? "";
     payload.recommendations = payload.recommendations ?? "";
@@ -87,7 +86,7 @@ export default function Risks() {
             Risks
           </Typography>
           <Typography sx={{ color: "text.secondary" }}>
-            CRUD de riesgos (P x I) + nivel automático + comunicación (observaciones/recomendaciones)
+            CRUD de riesgos y evaluación
           </Typography>
         </Box>
 

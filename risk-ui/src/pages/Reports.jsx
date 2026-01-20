@@ -15,7 +15,7 @@ export default function Reports() {
     <Box sx={{ width: "100%" }}>
       <Typography variant="h5" sx={{ fontWeight: 900 }}>Reports</Typography>
       <Typography sx={{ color: "text.secondary", mb: 2 }}>
-        Exportación y utilidades de demo
+        Exportación
       </Typography>
 
       <Card sx={{ borderRadius: 3 }}>
@@ -25,7 +25,7 @@ export default function Reports() {
               Descargar reporte CSV
             </Button>
             <Button variant="outlined" onClick={seedDemo}>
-              Seed demo (30 riesgos)
+              Demo Quemada (30 riesgos)
             </Button>
           </Stack>
         </CardContent>

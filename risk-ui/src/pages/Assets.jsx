@@ -42,7 +42,7 @@ export default function Assets() {
       <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 2 }}>
         <Box>
           <Typography variant="h5" sx={{ fontWeight: 900 }}>Assets</Typography>
-          <Typography sx={{ color: "text.secondary" }}>CRUD de activos y valoración CIA</Typography>
+          <Typography sx={{ color: "text.secondary" }}>CRUD de activos y valoración </Typography>
         </Box>
         <Button variant="contained" onClick={() => { setForm(empty); setOpen(true); }}>
           + Nuevo Asset

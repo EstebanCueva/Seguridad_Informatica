@@ -16,7 +16,7 @@ export default function Treatments() {
     notes: "",
     residualProbability: "",
     residualImpact: "",
-    selectedControls: {} // id -> {checked, status, evidence}
+    selectedControls: {} 
   });
 
   useEffect(() => {
@@ -51,7 +51,6 @@ export default function Treatments() {
         }));
       })
       .catch(() => {
-        // Si no existe plan, reseteamos selección
         setPlan(prev => ({ ...prev, selectedControls: {} }));
       });
   }, [riskId]);
@@ -109,7 +108,7 @@ export default function Treatments() {
     <Box sx={{ width: "100%" }}>
       <Typography variant="h5" sx={{ fontWeight: 900 }}>Treatments</Typography>
       <Typography sx={{ color: "text.secondary", mb: 2 }}>
-        Estrategia + responsables + controles ISO + evidencia + residual
+        Estrategia de tratamiento de riesgos y controles asociados
       </Typography>
 
       <Card sx={{ borderRadius: 3 }}>
